@@ -1,0 +1,86 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-card{
+    height: 600px;
+    width: 500px;
+    background-color: seagreen;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 100px 400px;
+    grid-template-columns: 200px 200px 200px 200px;
+}
+
+.title{
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.email{
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.instagram{
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.facebook{
+    display: grid;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.whatsapp{
+    display: grid;
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.content{
+    font-weight:normal;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    margin-top: 50px;
+}
+
+.email-content{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.instagram-content{
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.facebook-content{
+    display: grid;
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.whatsapp-content{
+    display: grid;
+    grid-column: 2;
+    grid-row: 4;
+}
+
+
+
+
+

@@ -1,0 +1,477 @@
+.hero{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero > .block-of-me{
+    height: 500px;
+    width: 500px;
+    margin-top: -180px;
+}
+
+.hero > .block-of-me > .circle{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.hero > .block-of-me > .name{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+}
+
+.hero > .block-of-me > .job{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 5px;
+}
+
+.hero > .block-of-me > .botton{
+    border-radius: 50px;
+    height: 70px;
+    width: 300px;
+    background-color: rgb(39, 139, 17);
+    margin-left: 100px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botton-word{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none !important;
+}
+
+.about > .hello{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin-top: 100px;
+}
+
+.about > .brief{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+
+
+/* skills section */
+
+
+
+.skills-title{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    margin-top: 100px;
+}
+
+.skills{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.skills p{
+    text-align: start;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.skills img{
+    border-radius: 50%;
+}
+
+.skills > .skill-one{
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills > .skill-one > img{
+    display: grid;
+    grid-column: 1;
+}
+
+
+.skills > .skill-one > p{
+    display: grid;
+    grid-column: 2;
+}
+
+.skills > .skill-two{
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    margin-left: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills > .skill-two > img{
+    display: grid;
+    grid-column: 1;
+}
+
+
+.skills > .skill-two > p{
+    display: grid;
+    grid-column: 2;
+}
+
+
+.skills > .skill-three{
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills > .skill-three > img{
+    display: grid;
+    grid-column: 1;
+}
+
+
+.skills > .skill-three > p{
+    display: grid;
+    grid-column: 2;
+}
+
+
+.skills > .skill-four{
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.skills > .skill-four > img{
+    display: grid;
+    grid-column: 1;
+}
+
+
+.skills > .skill-four > p{
+    display: grid;
+    grid-column: 2;
+}
+
+/* contact me section */
+.contact-section{
+    height: 30vh;
+    width:100vw;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-section > .botton-master-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botton-section{
+    border-radius: 50px;
+    height: 70px;
+    width: 300px;
+    background-color: rgb(39, 139, 17);
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* laptops */
+@media (width <= 992px){
+    /* skills section */
+
+    .skills p{
+        text-align: start;
+        width:300px;
+    }
+        
+    .skills > .skill-one{
+        display: grid;
+        grid-template-columns: 0;
+        justify-content: center;
+    }
+    
+    .skills > .skill-one > img{
+        display: grid;
+        grid-row: 1;
+    }
+    
+    
+    .skills > .skill-one > p{
+        display: grid;
+        grid-row: 2;
+    }
+    
+    .skills > .skill-two{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 0;
+        justify-content: center;
+    }
+    
+    .skills > .skill-two > img{
+        display: grid;
+        grid-row: 1;
+    }
+    
+    
+    .skills > .skill-two > p{
+        display: grid;
+        grid-row: 2;
+    }
+    
+    
+    .skills > .skill-three{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 0;
+        justify-content: center;
+    }
+    
+    .skills > .skill-three > img{
+        display: grid;
+        grid-row: 1;
+    }
+    
+    
+    .skills > .skill-three > p{
+        display: grid;
+        grid-row: 2;
+    }
+    
+    
+    .skills > .skill-four{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 0;
+        justify-content: center;
+    }
+    
+    .skills > .skill-four > img{
+        display: grid;
+        grid-row: 1;
+    }
+    
+    
+    .skills > .skill-four > p{
+        display: grid;
+        grid-row: 2;
+    }
+    
+    /* contact me section */
+    .contact-section{
+        margin-top: 550px;
+    }
+}
+
+
+
+/* tablits */
+@media (width <= 768px){
+
+    /* skills section */
+    
+    .skills{
+        height: 200vh;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .skills p{
+        text-align: center;
+    }
+        
+    .skills > .skill-one{
+        display: grid;
+        grid-row: 1;
+        grid-template-rows: 1fr 1fr;
+        width: 100vw;
+        margin-bottom: 50px;
+        margin-left: 0;
+        justify-content: center;
+    }
+    
+    .skills > .skill-two{
+        display: grid;
+        grid-row: 2;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
+        margin-left: 0;
+        justify-content: center;
+        width: 100vw;
+    }    
+    
+    .skills > .skill-three{
+        display: grid;
+        grid-row: 3;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
+        margin-left: 0;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .skills > .skill-four{
+        display: grid;
+        grid-row: 4;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
+        margin-left: 0;
+        justify-content: center;
+        width: 100vw;
+    }
+    
+    /* contact me section */
+    .contact-section{
+        margin-top: 1200px;
+    }.hero{
+        height: 100vh;
+        width:100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+}
+
+
+
+/* phones */
+@media (width <= 600px){
+
+    .hero > .block-of-me{
+        margin-bottom: 50px;
+    }
+    
+    .hero > .block-of-me > .circle{
+        height: 100px;
+        width: 100px;
+        margin-left: 200px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    
+    .hero > .block-of-me > .name{
+        font-size:large;
+    }
+    
+    .hero > .block-of-me > .job{
+        font-size:large;
+    }
+    
+    .hero > .block-of-me > .botton{
+        height: 35px;
+        width: 150px;
+        margin-left: 180px;
+        margin-bottom: 0;
+    }
+    
+    .botton-word{
+        font-size:small;
+    }
+    
+    .about > .hello{
+        margin-top: 50px;
+        font-size:large;
+    }
+    
+    .about > .brief{
+        font-size:small;
+    }
+    
+    
+    /* skills section */    
+    
+    .skills-title{
+        font-size:large;
+        margin-top: -200px;
+        margin-right: 0px;
+        margin-bottom: -50px;
+        margin-left: 25px;
+    }
+    
+    .skills{
+        height: 50vh;/*****/
+    }
+    
+    .skills p{
+        font-size:small;
+    }
+        
+    .skills img{
+        height: 150px;
+        width: 150px;
+    }
+    
+    .skills > .skill-one{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skills > .skill-two{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+    
+    .skills > .skill-three{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills > .skill-four{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* contact me section */
+    .contact-section{
+        margin-top: 1200px;
+    }
+
+    .botton-section{
+        height: 35px;
+        width: 150px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+        
+    h3{
+        font-size: large;
+    }
+    
+}
