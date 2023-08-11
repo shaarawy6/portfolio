@@ -1,86 +1,98 @@
+/* general */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 body{
-    height: 100vh;
-    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #212529;
+    color: white;
 }
 
+/* container */
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 880px;
 
-.contact-card{
-    height: 600px;
-    width: 500px;
-    background-color: seagreen;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: 100px 400px;
-    grid-template-columns: 200px 200px 200px 200px;
+    background-color: #233341;
+    border-radius: 10px;
 }
 
-.title{
-    font-weight: bolder;
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    margin-top: 50px;
+img{
+    width: 320px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#left{
+    display: flex;
+    flex: 4;
+}
+
+#right{
+    display: flex;
+    flex: 6;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     margin-left: 50px;
+    width: 480px;
 }
 
-.email{
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
+h1{
+    margin-left: -7px;
 }
 
-.instagram{
-    display: grid;
-    grid-column: 1;
-    grid-row: 2;
+p{
+    font-family: 'Poppins', sans-serif;
 }
 
-.facebook{
-    display: grid;
-    grid-column: 1;
-    grid-row: 3;
+.fa-brands , .fa-regular{
+    color:aquamarine
 }
 
-.whatsapp{
-    display: grid;
-    grid-column: 1;
-    grid-row: 4;
+@media(max-width:930px){
+    body{
+        flex-direction: column;
+        overflow-y:visible;
+        margin: 300px 0px;
+    }
+    #container{
+        flex-direction: column;
+        width: 450px;
+    }
+    #right{
+        width: 450px;
+    }
+    img{
+        border-radius: 10px 10px 0px 0px;
+        width: 450px;
+    }
 }
 
-.content{
-    font-weight:normal;
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    margin-top: 50px;
+@media(max-width:480px){
+    body{
+        flex-direction: column;
+        overflow-y:visible;
+        margin: 300px 0px;
+    }
+    #container{
+        flex-direction: column;
+        width: 250px;
+    }
+    #right{
+        width: 250px;
+        font-size: 50%;
+    }
+    img{
+        border-radius: 10px 10px 0px 0px;
+        width: 250px;
+    }
 }
-
-.email-content{
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
-}
-
-.instagram-content{
-    display: grid;
-    grid-column: 2;
-    grid-row: 2;
-}
-
-.facebook-content{
-    display: grid;
-    grid-column: 2;
-    grid-row: 3;
-}
-
-.whatsapp-content{
-    display: grid;
-    grid-column: 2;
-    grid-row: 4;
-}
-
-
-
-
-
