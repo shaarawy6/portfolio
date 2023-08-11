@@ -1,477 +1,336 @@
+/* general */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    background-color: #212529;
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* hero section */
 .hero{
-    height: 100vh;
-    width:100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width:100vw;
 }
 
-.hero > .block-of-me{
-    height: 500px;
-    width: 500px;
-    margin-top: -180px;
-}
-
-.hero > .block-of-me > .circle{
+.hero .circle{
     border-radius: 50%;
     height: 200px;
     width: 200px;
-    margin-left: 150px;
-    margin-top: 50px;
-    margin-bottom: 25px;
 }
 
-.hero > .block-of-me > .name{
+.hero .name{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 0;
+    padding: 20px 0;
 }
 
-.hero > .block-of-me > .job{
+.hero .job{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 5px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
 }
 
-.hero > .block-of-me > .botton{
-    border-radius: 50px;
-    height: 70px;
-    width: 300px;
-    background-color: rgb(39, 139, 17);
-    margin-left: 100px;
-    margin-top: 30px;
-    display: flex;
+.hero .botton{
     justify-content: center;
     align-items: center;
+    border-radius: 50px;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(39, 139, 17);
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
 }
 
 .botton-word{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none !important;
+    color: white;
 }
 
-.about > .hello{
+.botton:hover{
+    background-color: rgba(39, 139, 17, 0.619);
+}
+
+/* about */
+.about .hello{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     margin-top: 100px;
+    letter-spacing: 1px;
 }
 
-.about > .brief{
+.about .brief{
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: lighter;
     margin-top: 10px;
 }
 
 
 /* skills section */
-
-
-
-.skills-title{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    margin-top: 100px;
-}
-
-.skills{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-top: 100px;
+#skill-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 100px;
 }
 
-.skills p{
-    text-align: start;
-    margin-top: 50px;
-    margin-left: 10px;
+#skill-container p{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
+    margin-right: 10px;
+    line-height: 25px;
 }
 
-.skills img{
-    border-radius: 50%;
+#skill-container span{
+    font-weight: bold;
+    font-size: larger;
+    margin: 0;
+    padding: 0;
+    margin-top: 2px;
+    margin-bottom: -10px;
 }
 
-.skills > .skill-one{
+.skills-title{
+    text-align: center;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    border: 20px double #490462;
+    width: 80%;
+    padding: 10px 0px;
+}
+
+.skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 20px double #490462;
+    width: 80%;
+    height: 20%;
+}
+
+.skills .skill-one{
     display: grid;
     grid-column: 1;
     grid-row: 1;
-    margin-left: 10px;
     grid-template-columns: 1fr 1fr;
+    border: 10px double #490462;
 }
 
-.skills > .skill-one > img{
+.skill-one img{
     display: grid;
     grid-column: 1;
 }
 
 
-.skills > .skill-one > p{
+.skill-one p{
     display: grid;
     grid-column: 2;
 }
 
-.skills > .skill-two{
+.skills .skill-two{
     display: grid;
     grid-column: 2;
     grid-row: 1;
-    margin-left: 10px;
     grid-template-columns: 1fr 1fr;
+    border: 10px double #490462;
 }
 
-.skills > .skill-two > img{
+.skill-two img{
     display: grid;
     grid-column: 1;
 }
 
 
-.skills > .skill-two > p{
+.skill-two p{
     display: grid;
     grid-column: 2;
 }
 
 
-.skills > .skill-three{
+.skills .skill-three{
     display: grid;
     grid-column: 1;
     grid-row: 2;
-    margin-left: 10px;
     grid-template-columns: 1fr 1fr;
+    border: 10px double #490462;
 }
 
-.skills > .skill-three > img{
+.skill-three img{
     display: grid;
     grid-column: 1;
 }
 
 
-.skills > .skill-three > p{
+.skill-three p{
     display: grid;
     grid-column: 2;
 }
 
 
-.skills > .skill-four{
+.skills .skill-four{
     display: grid;
     grid-column: 2;
     grid-row: 2;
-    margin-left: 10px;
     grid-template-columns: 1fr 1fr;
+    border: 10px double #490462;
 }
 
-.skills > .skill-four > img{
+.skill-four img{
     display: grid;
     grid-column: 1;
 }
 
 
-.skills > .skill-four > p{
+.skill-four p{
     display: grid;
     grid-column: 2;
 }
 
 /* contact me section */
-.contact-section{
-    height: 30vh;
-    width:100vw;
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    align-items: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: #171a1c;
+    width: 100vw;
+    height: 20vh;
 }
 
-.contact-section > .botton-master-section{
+footer ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.botton-section{
-    border-radius: 50px;
-    height: 70px;
-    width: 300px;
-    background-color: rgb(39, 139, 17);
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+footer a{
+    color: #e6e7e4;
+}
+
+footer p{
+    color: #e6e7e4;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #495057;
 }
 
 /* laptops */
-@media (width <= 992px){
+@media (max-width:1500px){
     /* skills section */
+    .skill .skill-one{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+    .skill-one img{
+        display: grid;
+        grid-row: 1;
+        grid-column: none;
+        width: 100%;
+    }
+    
+    .skill-one p{
+        display: grid;
+        grid-row: 2;
+        grid-column: none;
+    }
+    
+    .skill .skill-two{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+    .skill-two img{
+        display: grid;
+        grid-row: 1;
+        grid-column: none;
+        width: 100%;
+    }
+    
+    .skill-two p{
+        display: grid;
+        grid-row: 2;
+        grid-column: none;
+    }
+    
+    .skill .skill-three{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+    .skill-three img{
+        display: grid;
+        grid-row: 1;
+        grid-column: none;
+        width: 100%;
+    }
+    
+    .skill-three p{
+        display: grid;
+        grid-row: 2;
+        grid-column: none;
+    }
 
-    .skills p{
-        text-align: start;
-        width:300px;
-    }
-        
-    .skills > .skill-one{
-        display: grid;
-        grid-template-columns: 0;
-        justify-content: center;
-    }
-    
-    .skills > .skill-one > img{
-        display: grid;
-        grid-row: 1;
-    }
-    
-    
-    .skills > .skill-one > p{
-        display: grid;
-        grid-row: 2;
-    }
-    
-    .skills > .skill-two{
-        display: grid;
+    .skill .skill-four{
         grid-template-rows: 1fr 1fr;
-        grid-template-columns: 0;
-        justify-content: center;
+        grid-template-columns: none;
     }
-    
-    .skills > .skill-two > img{
+    .skill-four img{
         display: grid;
         grid-row: 1;
+        grid-column: none;
+        width: 100%;
     }
-    
-    
-    .skills > .skill-two > p{
+
+    .skill-four p{
         display: grid;
         grid-row: 2;
-    }
-    
-    
-    .skills > .skill-three{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 0;
-        justify-content: center;
-    }
-    
-    .skills > .skill-three > img{
-        display: grid;
-        grid-row: 1;
-    }
-    
-    
-    .skills > .skill-three > p{
-        display: grid;
-        grid-row: 2;
-    }
-    
-    
-    .skills > .skill-four{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 0;
-        justify-content: center;
-    }
-    
-    .skills > .skill-four > img{
-        display: grid;
-        grid-row: 1;
-    }
-    
-    
-    .skills > .skill-four > p{
-        display: grid;
-        grid-row: 2;
-    }
-    
-    /* contact me section */
-    .contact-section{
-        margin-top: 550px;
+        grid-column: none;
     }
 }
 
 
 
 /* tablits */
-@media (width <= 768px){
-
+@media (max-width:768px){
     /* skills section */
-    
     .skills{
-        height: 200vh;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
+        display: block;
     }
-    
-    .skills p{
-        text-align: center;
-    }
-        
-    .skills > .skill-one{
-        display: grid;
-        grid-row: 1;
-        grid-template-rows: 1fr 1fr;
-        width: 100vw;
-        margin-bottom: 50px;
-        margin-left: 0;
-        justify-content: center;
-    }
-    
-    .skills > .skill-two{
-        display: grid;
-        grid-row: 2;
-        grid-template-rows: 1fr 1fr;
-        margin-bottom: 50px;
-        margin-left: 0;
-        justify-content: center;
-        width: 100vw;
-    }    
-    
-    .skills > .skill-three{
-        display: grid;
-        grid-row: 3;
-        grid-template-rows: 1fr 1fr;
-        margin-bottom: 50px;
-        margin-left: 0;
-        justify-content: center;
-        width: 100vw;
-    }
-
-    .skills > .skill-four{
-        display: grid;
-        grid-row: 4;
-        grid-template-rows: 1fr 1fr;
-        margin-bottom: 50px;
-        margin-left: 0;
-        justify-content: center;
-        width: 100vw;
-    }
-    
-    /* contact me section */
-    .contact-section{
-        margin-top: 1200px;
-    }.hero{
-        height: 100vh;
-        width:100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-
 }
 
-
-
-/* phones */
-@media (width <= 600px){
-
-    .hero > .block-of-me{
-        margin-bottom: 50px;
-    }
-    
-    .hero > .block-of-me > .circle{
-        height: 100px;
-        width: 100px;
-        margin-left: 200px;
-        margin-top: 50px;
-        margin-bottom: 25px;
-    }
-    
-    .hero > .block-of-me > .name{
-        font-size:large;
-    }
-    
-    .hero > .block-of-me > .job{
-        font-size:large;
-    }
-    
-    .hero > .block-of-me > .botton{
-        height: 35px;
-        width: 150px;
-        margin-left: 180px;
-        margin-bottom: 0;
-    }
-    
-    .botton-word{
-        font-size:small;
-    }
-    
-    .about > .hello{
-        margin-top: 50px;
-        font-size:large;
-    }
-    
-    .about > .brief{
-        font-size:small;
-    }
-    
-    
-    /* skills section */    
-    
-    .skills-title{
-        font-size:large;
-        margin-top: -200px;
-        margin-right: 0px;
-        margin-bottom: -50px;
-        margin-left: 25px;
-    }
-    
-    .skills{
-        height: 50vh;/*****/
-    }
-    
-    .skills p{
-        font-size:small;
-    }
-        
-    .skills img{
-        height: 150px;
-        width: 150px;
-    }
-    
-    .skills > .skill-one{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .skills > .skill-two{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }    
-    
-    .skills > .skill-three{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skills > .skill-four{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    
+/* small phones */
+@media(max-width:400px){
     /* contact me section */
-    .contact-section{
-        margin-top: 1200px;
+    footer{
+        height:35vh;
     }
-
-    .botton-section{
-        height: 35px;
-        width: 150px;
-        display: flex;
-        justify-content: center;
+    footer ul{
         flex-direction: column;
-        align-items: center;
+        padding-bottom: 10px;
+        line-height: 30px;
     }
-        
-    h3{
-        font-size: large;
-    }
-    
 }
