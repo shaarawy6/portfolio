@@ -4,81 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<!-- name font: Roboto -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 <body>
     <!-- hero section -->
     <div class = "hero">
-        <div class = "block-of-me">
-            <img class = "circle" src = "./me.jpg" alt = "photo of Mohamed Elshaarawy">
-            <h1 class = "name">Mohamed Elshaarawy</h1> 
-            <h3 class = "job">Full Stack Web Developer</h3>
-            <div class = "botton">
-                <a class = "botton-word" href = "http://127.0.0.1:3000/capstone project 2/contact.html">Contact Me</a>
-            </div>
-            <div class = "about">
-                <h2 class = "hello">Hello</h2>
-                <p class = "brief">This website is about me!.<br/>
-                    you will know what is my skills, experiances, and interestes.<br/>
-                    Moreover,what is the course that i took to do this website.
-                </p>
-            </div>        
+        <img title = "Mohamed" class = "circle" src = "./me.jpg" alt = "photo of Mohamed Elshaarawy">
+        <h1 class = "name">Mohamed Elshaarawy</h1> 
+        <h3 class = "job">Full Stack Web Developer</h3>
+        <div class = "botton" onclick = "myfunction()">
+            <a class = "botton-word" href = "http://127.0.0.1:3000/capstone 2/version 2/contact.html">Contact Me</a>
         </div>
+        <div class = "about">
+            <h2 class = "hello">Hello</h2>
+            <p class = "brief">This website is about me!.<br/>
+                you will know what is my skills, experiances, and interestes.<br/>
+            </p>
+        </div>        
     </div>
 
     <!-- skills section -->
-    <h2 class = "skills-title">Skills</h2>
-    <div class = "skills">
-        <div class = "skill-one">
-            <img src = "./coding.jpg" alt = "coding image"/>
-            <p>I am deeply passionate about programming, continuously honing my skills through self-learning and exploration.<br/><br/>
-                With the ability to independently create functional websites and bring imaginative concepts to life, I excel in web development.
-            </p>
-        </div>
-        <div class = "skill-two">
-            <img src = "./hard-worker.jpg" alt = "hard working image"/>
-            <p>I demonstrate a strong work ethic and am committed to being a diligent and hardworking individual.<br/><br/>
-                I prioritize efficiency, aiming to complete tasks promptly and effectively.   
-            </p> 
-        </div>
-        <div class = "skill-three">
-            <img src = "./time-managment.jpg" alt = "tima managment image"/>
-            <p>I am confident in my ability to manage my time effectively and efficiently.<br/><br/>
-                With strong time management skills, I maximize productivity and achieve my goals.<br/><br/> 
-            </p> 
-        </div>
-        <div class = "skill-four">
-            <img src = "./multi-tasker.jpg" alt = "multi tasking image"/>
-            <p>I excel at multitasking, efficiently managing multiple tasks or activities at the same time.<br/><br/>
-                My capacity to juggle various responsibilities simultaneously makes me a highly effective and productive individual.
-            </p>
-        </div>
-    </div>
-
-    <!-- contact me -->
-    <div class = "contact-section">
-        <h3>Please feel free to reach out to me at your convenience.</h3>
-        <div class = "botton-master-section">
-            <div class = "botton-section">
-                <a class = "botton-word" href = "http://127.0.0.1:3000/capstone project 2/contact.html">Contact Me</a>
+    <div id="skill-container">
+        <h2 class = "skills-title">Skills</h2>
+        <div class = "skills">
+            <div class = "skill-one">
+                <img src = "./coding.jpg" alt = "coding image"/>
+                <p><span>Coding</span><br>I am deeply passionate about programming, continuously honing my skills through self-learning and exploration.<br/><br/>
+                    With the ability to independently create functional websites and bring imaginative concepts to life, I excel in web development.
+                </p>
             </div>
-        </div>
-        <div class="container">
-            <footer class="py-3 my-4">
-              <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">Email</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">FaceBook</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">Instagram</a></li>
-                <li class="nav-item"><a href="./contact.html" class="nav-link px-2 text-body-secondary">WhatApp</a></li>
-              </ul>
-              <p class="text-center text-body-secondary">© 2023 Mohamed Elshaarawy</p>
-            </footer>
-          </div>
+            <div class = "skill-two">
+                <img src = "./hard-worker.jpg" alt = "hard working image"/>
+                <p><span>hard worker</span><br>I demonstrate a strong work ethic and am committed to being a diligent and hardworking individual.<br/><br/>
+                    I prioritize efficiency, aiming to complete tasks promptly and effectively.   
+                </p> 
+            </div>
+            <div class = "skill-three">
+                <img src = "./time-managment.jpg" alt = "tima managment image"/>
+                <p><span>time managment</span><br>I am confident in my ability to manage my time effectively and efficiently.<br/><br/>
+                    With strong time management skills, I maximize productivity and achieve my goals.<br/><br/> 
+                </p> 
+            </div>
+            <div class = "skill-four">
+                <img src = "./multi-tasker.jpg" alt = "multi tasking image"/>
+                <p><span>multitasker</span><br>I excel at multitasking, efficiently managing multiple tasks or activities at the same time.<br/><br/>
+                    My capacity to juggle various responsibilities simultaneously makes me a highly effective and productive individual.
+                </p>
+            </div>
+        </div>    
     </div>
+    <!-- contact me -->
+    <footer>
+        <ul>
+        <li><a style = "text-decoration: none;" href="./contact.html">Email</a></li>
+        <li><a style = "text-decoration: none;" href="./contact.html">FaceBook</a></li>
+        <li><a style = "text-decoration: none;" href="./contact.html">Instagram</a></li>
+        <li><a style = "text-decoration: none;" href="./contact.html">Github</a></li>
+        <li><a style = "text-decoration: none;" href="./contact.html">LinkedIn</a></li>
+        <li><a style = "text-decoration: none;" href="./contact.html">Twitter</a></li>
+        </ul>
+        <hr>
+        <p class="text-center text-body-secondary">© 2023 Mohamed Elshaarawy</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="index.js" charset="UTF-8"></script>
+
 </body>
 </html>
