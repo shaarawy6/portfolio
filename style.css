@@ -1,337 +1,789 @@
 /* general */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
 
 body{
-    background-color: #212529;
-    margin: 0;
-    padding: 0;
+    font-family: 'poppins' , sans-serif;
+}
+
+
+/* nav */
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333647;
     color: white;
-    overflow-x: hidden;
+    position: fixed;
+    border: none;
+    width: 100vw;
+    height: 80px;
+    z-index: 1;
 }
 
-/* hero section */
-.hero{
+#nav .title{
+    font-family: 'Tangerine', serif;
+    font-size: 2.5rem;
+    line-height: 0;
+    position: relative;
+    left: 50px;
+    transition: .3s;
+}
+
+#nav .title:hover{
+    transform: scale(1.1);
+}
+
+#nav .menu{
+    position: relative;
+    right: 50px;
+}
+
+#nav .menu a{
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 5s;
+}
+
+.hire a{
+    padding: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.hire{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #DB7816;
+    background: linear-gradient(135deg, #DB7816, #FFBD19);
+    transition: .3s;
+}
+
+.hire:hover{
+    transform: scale(1.1);
+}
+    
+/* main */
+#main{
+    background: #333647;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 100vh;
-    width:100vw;
 }
 
-.hero .circle{
-    border-radius: 50%;
-    height: 200px;
-    width: 200px;
-    border: 10px double green;;
+#main .info{
+    position: relative;
+    text-align: start;
+    left: 50px;
+    color: white;
 }
 
-.hero .name{
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    padding: 20px 0;
+#main .info .name{
+    font-size: 4rem;
+    line-height: 60px;
 }
 
-.hero .job{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: 2px;
-    margin: 0;
-    padding: 0;
+#main .info .name::before{
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    padding: 5px 670px 0 0;
+    top: 65px;
+    background: linear-gradient(to right,red,blue);
+    border-color:#333647;
+    left: -5px;
+    transition: .3s;
 }
 
-.hero .botton{
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    height: 50px;
-    width: 200px;
-    background-color: rgb(39, 139, 17);
+#main .info .job{
+    font-size: 2rem;
+    line-height: 0;
+    position: relative;
+    top:70px;
+}
+
+#main .info .about{
+    width: 670px;
+    text-align: justify;
+    line-height: 25px;
+    position: relative;
+    top:100px;
+    font-size: 1.2rem;
+}
+
+#main .action{
     display: flex;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    left: 0;
+    position: relative;
+    top:145px;
+}
+
+#main .explore{
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: 
+    linear-gradient(to right, #333647, #333647), 
+    linear-gradient(to right, red , blue); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    padding: 0 20px;
+    position: relative;
     cursor: pointer;
 }
 
-.botton-word{
+#main .explore button{
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    background: linear-gradient(135deg, #1916db, #ff1919);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#main .explore button div{
+    border: 10px solid;
+    border-color: transparent transparent transparent #3639d3;
+    position: absolute;
+    top: 10.5px;
+    left: 17.5px;
+    cursor: pointer;
+}
+
+#main .explore:hover button{
+    position: absolute;
+    transform: translate(100px);
+}
+
+#main .explore p{
+    position: absolute;
+    right: 20px;
+    transition: .5s;
+}
+
+#main .explore:hover p{
+    opacity: 0;
+}
+
+#main .image{
+    position: relative;
+    top: 50px;
+    right: 100px;
+}
+
+#main .image img{
+    width: 350px;
+}
+
+/* content */
+#content{
+    width: 100%;
+    height: 100%;
+    background: #282a39;
+}
+
+#content .title{
     text-align: center;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none !important;
+    font-size: 1.5rem;
     color: white;
+    padding: 50px 0;
 }
 
-.botton:hover{
-    background-color: rgba(39, 139, 17, 0.619);
+#content .projects{
+    display: block;
+    margin: 0 50px;
 }
 
-/* about */
-.about .hello{
-    text-align: center;
-    font-weight: 900;
-    margin-top: 100px;
-    letter-spacing: 1px;
-}
-
-.about .brief{
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-    font-weight: lighter;
-    margin-top: 10px;
-}
-
-
-/* skills section */
-#skill-container{
+#content .projects .project{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 100px;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 50px 0;
 }
 
-#skill-container p{
-    font-family: 'Poppins', sans-serif;
-    margin-left: 20px;
-    margin-right: 10px;
-    line-height: 25px;
+#content .projects .project .image{
+    flex: 1;
+    background: #333647;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-#skill-container span{
-    font-weight: bold;
-    font-size: larger;
-    margin: 0;
-    padding: 0;
-    margin-top: 2px;
-    margin-bottom: -10px;
+#content .projects .project .text{
+    flex: 6;
+    margin-left: 100px;
+    color: white;
+    cursor: pointer;
 }
 
-.skills-title{
-    text-align: center;
-    font-weight: 900;
-    margin: 0;
-    padding: 0;
-    margin-top: 100px;
-    border: 20px double #490462;
-    width: 80%;
-    padding: 10px 0px;
+#content .projects .project .text h2{
+    font-size: 2rem;
+    line-height: 50px;
+    transition: .3s;
+    width: fit-content;
 }
 
-.skills{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    border: 20px double #490462;
-    width: 80%;
-    height: 20%;
+#content .projects .project .text p{
+    font-size: 1.2rem;
+    line-height: 30px;
+    text-align: justify;
 }
 
-.skills .skill-one{
-    display: grid;
-    grid-column: 1;
-    grid-row: 1;
-    grid-template-columns: 1fr 1fr;
-    border: 10px double #490462;
+#content .projects .image{
+    cursor: pointer;
 }
 
-.skill-one img{
-    display: grid;
-    grid-column: 1;
+#content .projects img{
+    width: 300px;
+    border-radius: 5px;
+    transition: .3s;
 }
 
-
-.skill-one p{
-    display: grid;
-    grid-column: 2;
-}
-
-.skills .skill-two{
-    display: grid;
-    grid-column: 2;
-    grid-row: 1;
-    grid-template-columns: 1fr 1fr;
-    border: 10px double #490462;
-}
-
-.skill-two img{
-    display: grid;
-    grid-column: 1;
-}
-
-
-.skill-two p{
-    display: grid;
-    grid-column: 2;
-}
-
-
-.skills .skill-three{
-    display: grid;
-    grid-column: 1;
-    grid-row: 2;
-    grid-template-columns: 1fr 1fr;
-    border: 10px double #490462;
-}
-
-.skill-three img{
-    display: grid;
-    grid-column: 1;
-}
-
-
-.skill-three p{
-    display: grid;
-    grid-column: 2;
-}
-
-
-.skills .skill-four{
-    display: grid;
-    grid-column: 2;
-    grid-row: 2;
-    grid-template-columns: 1fr 1fr;
-    border: 10px double #490462;
-}
-
-.skill-four img{
-    display: grid;
-    grid-column: 1;
-}
-
-
-.skill-four p{
-    display: grid;
-    grid-column: 2;
-}
-
-/* contact me section */
 footer{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-
-    margin: 0;
-    padding: 0;
-    background-color: #171a1c;
-    width: 100vw;
-    height: 20vh;
+    align-items: center;
+    background: #1f2323;
 }
 
-footer ul{
+footer .text{
+    text-align: center;
+    width: 80%;
+    margin-top: 50px;
+    color: #b9baba;
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+footer .icons{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 50%;
+    padding: 50px;
+    font-size: xx-large;
 }
 
-footer a{
-    color: #e6e7e4;
+footer .icons .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(245, 245, 245);
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
 
-footer p{
-    color: #e6e7e4;
-}
-
-hr {
-    width: 100%;
-    border: 1px solid #495057;
-}
-
-/* laptops */
-@media (max-width:1500px){
-    /* skills section */
-    .skill .skill-one{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: none;
+/* media */
+@media(min-width:1600px){
+    #nav .title{
+        left: 10%;
     }
-    .skill-one img{
-        display: grid;
-        grid-row: 1;
-        grid-column: none;
-        width: 100%;
+
+    #nav .menu{
+        right: 10%;
     }
     
-    .skill-one p{
-        display: grid;
-        grid-row: 2;
-        grid-column: none;
+    #main .info{
+        left: 10%;
     }
     
-    .skill .skill-two{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: none;
-    }
-    .skill-two img{
-        display: grid;
-        grid-row: 1;
-        grid-column: none;
-        width: 100%;
-    }
-    
-    .skill-two p{
-        display: grid;
-        grid-row: 2;
-        grid-column: none;
-    }
-    
-    .skill .skill-three{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: none;
-    }
-    .skill-three img{
-        display: grid;
-        grid-row: 1;
-        grid-column: none;
-        width: 100%;
-    }
-    
-    .skill-three p{
-        display: grid;
-        grid-row: 2;
-        grid-column: none;
+    #main .image{
+        right: 11%;
     }
 
-    .skill .skill-four{
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: none;
-    }
-    .skill-four img{
-        display: grid;
-        grid-row: 1;
-        grid-column: none;
-        width: 100%;
-    }
-
-    .skill-four p{
-        display: grid;
-        grid-row: 2;
-        grid-column: none;
-    }
-}
-
-
-
-/* tablits */
-@media (max-width:768px){
-    /* skills section */
-    .skills{
+    #content .projects{
         display: block;
+        margin: 0 10%;
     }
 }
 
-/* small phones */
-@media(max-width:400px){
-    /* contact me section */
-    footer{
-        height:35vh;
-    }
-    footer ul{
-        flex-direction: column;
-        padding-bottom: 10px;
-        line-height: 30px;
+@media(max-width:1340px){
+    #main .image{
+        position: relative;
+        top: 50px;
+        right: 50px;
     }
 }
+
+@media(max-width:1160px){
+    #main .image{
+        position: absolute;
+        top: 100px;
+        left: 0;
+        text-align: center;
+    }
+    
+    #main .image img{
+        opacity: 20%;
+    }
+    
+    #content .projects .project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }    
+
+    #content .projects .project .image {
+        flex: 0;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #content .projects .project .image img{
+        width: 500px;
+    }
+
+    #content .projects .project .text {
+        flex: none;
+        margin: 0;
+    }
+}
+
+@media(max-width:768px){
+    #nav{
+        height: 60px;
+    }
+
+    #nav .title{
+        font-size: 1.5rem;
+    }
+    
+    #nav .menu a{
+        font-size: .8rem;
+    }
+    
+    .hire a{
+        font-size: .8rem;
+    }
+
+    #main .info {
+        left: 10%;
+    }
+
+    #main .info .name{
+        font-size: 2.5rem;
+        line-height: 80px;
+    }
+
+    #main .info .name::before{
+        padding: 5px 425px 0 0;
+    }
+
+    #main .info .job{
+        font-size: 1.7rem;
+        top:40px;
+    }
+
+    #main .info .about{
+        width: 420px;
+        line-height: 20px;
+        top:65px;
+        font-size: .8rem;
+    }
+
+    #main .action{
+        top:95px;
+    }
+    
+    #content .title{
+        text-align: center;
+        font-size: .9rem;
+        color: white;
+        padding: 50px 0;
+    }
+
+    #content .projects .project .text h2{
+        font-size: 1.4rem;
+    }
+    
+    #content .projects .project .text p{
+        font-size: .9rem;
+        line-height: 20px;
+    }
+    
+    footer .text{
+        font-size: .9rem;
+        line-height: 20px;
+    }
+    
+    footer .icons .icon{
+        width: 30px;
+        height: 30px;
+    }
+    
+    footer .icons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        padding: 50px;
+        font-size: large;
+    }
+}
+
+@media(max-width:580px){
+    *{
+        font-size: .8rem;
+    }
+
+    #main .info .name{
+        line-height: 95px;
+    }
+
+    #main .info .name::before{
+        padding: 5px 338px 0 0;
+    }
+
+    #main .info .job{
+        top:20px;
+    }
+
+    #main .info .about{
+        top:45px;
+        width: 350px;
+    }
+
+    #main .action{
+        top:65px;
+    }
+    
+    #content .projects .project .text h2{
+        padding: 10px 0;
+    }
+
+    #content .projects .project .image img {
+        width: 350px;
+    }
+        
+    footer .icons .icon{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media(max-width:540px){
+
+    #nav{
+        justify-content: center;
+    }
+
+    #nav .menu{
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    #nav .title{
+        display: none;
+    }
+}
+
+@media(max-width:420px){
+
+    #nav{
+        height: 40px;
+    }
+    
+    #nav .menu a{
+        font-size: .5rem;
+        padding: 0;
+    }
+    
+    .hire{
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hire a{
+        padding: 0;
+        font-size: .5rem;
+    }
+   
+    #main{
+        background: #333647;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 40vh;
+    }
+    
+    #main .info{
+        position: relative;
+        text-align: start;
+        left: 5%;
+        color: white;
+    }
+
+    #main .info .name{
+        font-size: 2rem;
+        line-height: 105px;
+    }
+    
+    #main .info .name::before{
+        padding: 5px 270px 0 0;
+    }
+    
+    #main .info .job{
+        font-size: 1rem;
+        top:0;
+    }
+    
+    #main .info .about{
+        width: 270px;
+        line-height:10px;
+        top:10px;
+        font-size: .58rem;
+    }
+
+    #main .image{
+        position: absolute;
+        top: 38px;
+        left: 0;
+        text-align: center;
+    }
+        
+    #main .image img{
+        width: 120px;
+    }
+    
+    #main .action{
+        width: 150px;
+        top:20px;
+    }
+    
+    #main .explore{
+        width: 20px;
+        height: 15px;/*edit*/
+        border-radius: 20px;
+        padding: 0 20px;
+    }
+    
+    #main .explore button{
+        padding: 7.5px;
+    }
+    
+    #main .explore button div{
+        border: 5px solid;
+        border-color: transparent transparent transparent #3639d3;
+        top: 3px;
+        left: 6.5px;
+    }
+    
+    #main .explore p{
+        right: 8px;
+        font-size: .58rem;
+    }
+    
+    #content .title{
+        text-align: center;
+        font-size: 1.2rem;
+        color: white;
+        line-height: 0;
+        padding: 30px 0;
+    }
+    
+    #content .projects .project{
+        padding: 10px 0;
+    }
+    
+    #content .projects .project .image img {
+        width: 200px;
+    }
+
+    #content .projects .project .text h2{
+        font-size: .9rem;
+        line-height: 0;
+    }
+
+    #content .projects .project .text p{
+        font-size: .5rem;
+        line-height: 10px;
+    }
+    
+    footer .text{
+        font-size: .5rem; /*not working*/
+        line-height: 10px;
+    }
+
+    footer .icons .icon{
+        width: 5px;
+        height: 5px;
+    }
+    
+    footer .icons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        padding: 20px;
+        font-size: xx-small;
+    }
+}
+
+/* 
+@media(max-width:300px){
+
+    #nav{
+        height: 20px;
+    }
+    
+    #nav .menu a{
+        font-size: .25rem;
+        padding: 0;
+    }
+    
+    .hire{
+        padding: 2.5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hire a{
+        padding: 0;
+        font-size: .25rem;
+    }
+   
+    #main{
+        height: 40vh;
+    }
+    
+    #main .info{
+        position: relative;
+        text-align: start;
+        left: 5%;
+        color: white;
+    }
+
+    #main .info .name{
+        font-size: 1rem;
+        line-height: 120px;
+    }
+    
+    #main .info .name::before{
+        display: none;
+    }
+    
+    #main .info .job{
+        font-size: .5rem;
+        top:-35px;
+    }
+    
+    #main .info .about{
+        width: 130px;
+        line-height:5px;
+        top:-30px;
+        font-size: .25rem;
+    }
+
+    #main .image{
+        position: absolute;
+        top: 18px;
+        left: 0;
+        text-align: center;
+    }
+        
+    #main .image img{
+        width: 60px;
+    }
+    
+    #main .action{
+        width: 70px;
+        top:-25px;
+    }
+    
+    #main .explore{
+        width: 15px;
+        height: 5px;
+        border-radius: 20px;
+        padding: 0 5px;
+    }
+    
+    #main .explore button{
+        padding: 3px;
+    }
+    
+    #main .explore button div{
+       display: none;
+    }
+    
+    #main .explore p{
+        right: 3px;
+        font-size: .25rem;
+    }
+    
+    #content .title{
+        text-align: center;
+        font-size: .5rem;
+        color: white;
+        line-height: 0;
+        padding: 10px 0;
+    }
+    
+    #content .projects .project{
+        padding: 10px 0;
+    }
+    
+    #content .projects .project .image img {
+        width: 200px;
+    }
+
+    #content .projects .project .text h2{
+        font-size: .9rem;
+        line-height: 0;
+    }
+
+    #content .projects .project .text p{
+        font-size: .5rem;
+        line-height: 10px;
+    }
+    
+    footer .text{
+        font-size: .5rem;
+        line-height: 10px;
+    }
+
+    footer .icons .icon{
+        width: 15px;
+        height: 15px;
+    }
+    
+    footer .icons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 50%;
+        padding: 20px;
+        font-size: xx-small;
+    }
+}
+ */
