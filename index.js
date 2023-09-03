@@ -1,10 +1,4 @@
-// explore button
-const explore = document.querySelector(".explore");
-explore.addEventListener("click",function(){
-    document.querySelector(".menu .showprojects").click();
-});
-
-// procet clicks
+// project clicks
 //airbnb
 document.querySelector("#airbnb .image").addEventListener("click",function(){
     window.open("https://shaarawy6.github.io/Airbnb/","_blank");
@@ -72,25 +66,20 @@ document.querySelector("#todolistapp .text").addEventListener("click",function()
 
 // image and h2 scale when hover
 const projects = document.querySelectorAll(".projects .project");
-const text = document.querySelectorAll(".projects .text h2");
 const image = document.querySelectorAll(".projects .image img");
 
 for(let i = 0; i < projects.length; i++){ 
     projects[i].addEventListener("mouseover",function(){
-        text[i].style.transform = "scale(1.1)";
-        image[i].style.transform = "scale(1.1)";
+        image[i].style.transform = "scale(1.05)";
     });
     projects[i].addEventListener("mouseout",function(){
-        text[i].style.transform = "scale(1)";
         image[i].style.transform = "scale(1)";
     });
 
     projects[i].addEventListener("mouseover",function(){
-        text[i].style.transform = "scale(1.1)";
-        image[i].style.transform = "scale(1.1)";
+        image[i].style.transform = "scale(1.05)";
     });
     projects[i].addEventListener("mouseout",function(){
-        text[i].style.transform = "scale(1)";
         image[i].style.transform = "scale(1)";
     });
 

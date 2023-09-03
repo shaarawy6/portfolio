@@ -1,68 +1,106 @@
 /* general */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
 
 body{
-    font-family: 'poppins' , sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1rem;
+    color: white;
+    overflow-x: hidden;
 }
 
+/* 
+============
+    container
+============
+*/
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
 
-/* nav */
-#nav{
+.nav-background{
+    background: #333647;
+    width: 100%;
+}
+
+.main-background{
+    background: #333647;
+    width: 100%;
+}
+
+.content-background{
+    background: #282a39;
+    width: 100%;
+}
+
+.footer-background{
+    background: #1f2323;
+    width: 100%;
+}
+
+/* 
+============
+    nav
+============
+*/
+
+.nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333647;
-    color: white;
+    background: rgba(51, 54, 71, 0.96);
     position: fixed;
-    border: none;
-    width: 100vw;
-    height: 80px;
+    padding: 1.5em 0;
     z-index: 1;
+    border-radius: 0 0 10px 10px;
 }
 
-#nav .title{
-    font-family: 'Tangerine', serif;
-    font-size: 2.5rem;
+.nav .title{
     line-height: 0;
-    position: relative;
-    left: 50px;
     transition: .3s;
+    margin-left: 1em;
+    font-size: 2.5rem;
 }
 
-#nav .title:hover{
-    transform: scale(1.1);
+.nav .menu{
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#nav .menu{
-    position: relative;
-    right: 50px;
-}
-
-#nav .menu a{
-    padding: 0 10px;
-    color: white;
+a{
+    padding: .5em;
     text-decoration: none;
-    font-size: 1.5rem;
-    transition: 5s;
-}
-
-.hire a{
-    padding: 0 10px;
     color: white;
-    text-decoration: none;
     font-size: 1.2rem;
 }
 
+.hire a{
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+    font-size: 1.2rem;    
+    vertical-align:middle;
+}
+
 .hire{
-    padding: 10px;
     border: none;
     border-radius: 10px;
-    background: #DB7816;
     background: linear-gradient(135deg, #DB7816, #FFBD19);
     transition: .3s;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hire:hover{
@@ -70,191 +108,123 @@ body{
 }
     
 /* main */
-#main{
-    background: #333647;
+.main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    background: #333647;
     height: 100%;
-    padding: 50px 0;
-}
-
-#main .info{
     position: relative;
-    text-align: start;
-    left: 50px;
-    color: white;
+    padding: 12em 0;
 }
 
-#main .info .name{
+.main .info{
+    margin-left: 2.5em;
+    width: 49%;    
+}
+
+.main .name{
     font-size: 4rem;
-    line-height: 60px;
+    line-height: 1.6;
+    border-bottom: .15em solid white;
+    width: fit-content;
 }
 
-#main .info .name::before{
-    content: "";
-    position: absolute;
-    border: 5px solid;
-    padding: 5px 670px 0 0;
-    top: 65px;
-    background: linear-gradient(to right,red,blue);
-    border-color:#333647;
-    left: -5px;
-    transition: .3s;
-}
-
-#main .info .job{
+.main .job{
     font-size: 2rem;
     line-height: 0;
-    position: relative;
-    top:70px;
+    margin-top: 2em;
 }
 
-#main .info .about{
-    width: 670px;
+.main .about{
+    margin: 1.5em 0;
     text-align: justify;
-    line-height: 25px;
-    position: relative;
-    top:100px;
-    font-size: 1.2rem;
+    line-height: 1.6;
 }
 
-#main .action{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 330px;
-    left: 0;
-    position: relative;
-    top:145px;
-}
-
-#main .explore{
-    display: flex;
-    align-items: center;
-    width: 100px;
-    height: 40px;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    background: 
-    linear-gradient(to right, #333647, #333647), 
-    linear-gradient(to right, red , blue); 
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-    padding: 0 20px;
-    position: relative;
-    cursor: pointer;
-}
-
-#main .explore button{
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    padding: 20px;
+.main img{
+    margin-right: 10em;
     position: absolute;
-    left: 0;
-    background: linear-gradient(135deg, #1916db, #ff1919);
-    cursor: pointer;
-    transition: 1s;
+    bottom: 0;
+    right: 0;
 }
 
-#main .explore button div{
-    border: 10px solid;
-    border-color: transparent transparent transparent #3639d3;
-    position: absolute;
-    top: 10.5px;
-    left: 17.5px;
-    cursor: pointer;
+.main img{
+    width: 23%;
 }
 
-#main .explore:hover button{
-    position: absolute;
-    transform: translate(100px);
-}
+/* 
+============
+    content
+============
+*/
 
-#main .explore p{
-    position: absolute;
-    right: 20px;
-    transition: .5s;
-}
-
-#main .explore:hover p{
-    opacity: 0;
-}
-
-#main .image{
-    position: relative;
-    top: 50px;
-    right: 100px;
-}
-
-#main .image img{
-    width: 350px;
-}
-
-/* content */
-#content{
-    width: 100%;
-    height: 100%;
+.content{
     background: #282a39;
 }
 
-#content .title{
+.content .title{
     text-align: center;
-    font-size: 1.5rem;
-    color: white;
-    padding: 50px 0;
+    font-size: 3rem;
+    padding: 1em 0;
 }
 
-#content .projects{
-    display: block;
-    margin: 0 50px;
-}
-
-#content .projects .project{
+.content .projects{
     display: flex;
-    align-items: start;
-    justify-content: flex-start;
-    padding: 50px 0;
+    flex-direction: column;
+    margin: 0 2em;
 }
 
-#content .projects .project .image{
-    flex: 1;
+.content .project{
+    display: grid;
+    grid-template-columns: 5fr 15fr;
+    padding: 3em 0;
+    border: .1em solid;
+    border-image: linear-gradient(#09203f 0%, #537895 100%) 30;
+    border-width: .1em 0;
+}
+
+.content .image{
     background: #333647;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-#content .projects .project .text{
-    flex: 6;
-    margin-left: 100px;
-    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    align-self: center;
     cursor: pointer;
+    width: 100%;
+    grid-column: 1;
 }
 
-#content .projects .project .text h2{
+.content .text{
+    margin-left: 5em;
+    cursor: pointer;
+    grid-column: 2;
+}
+
+.content .text h2{
     font-size: 2rem;
-    line-height: 50px;
+    line-height:2;
     transition: .3s;
-    width: fit-content;
-    line-height: 50px;
+    text-wrap: balance;
 }
 
-#content .projects .project .text p{
-    font-size: 1.2rem;
-    line-height: 30px;
+.content .text p{
+    line-height: 1.7;
     text-align: justify;
+    font-size: 1.2rem;
 }
 
-#content .projects .image{
-    cursor: pointer;
-}
-
-#content .projects img{
-    width: 300px;
+.content img{
+    width: 100%;
     border-radius: 5px;
     transition: .3s;
+}
+
+.content .last{
+    border-bottom: none;
+}
+
+.content .first{
+    border-top: none;
 }
 
 footer{
@@ -268,12 +238,12 @@ footer{
 footer .text{
     text-align: center;
     width: 80%;
-    margin-top: 50px;
+    margin-top: 2em;
     color: #b9baba;
-    font-size: 1.2rem;
-    line-height: 30px;
+    line-height: 1.7;
     text-align: start;
-
+    font-size: 1.2rem;
+    text-align: justify;
 }
 
 footer .icons{
@@ -281,305 +251,158 @@ footer .icons{
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
-    padding: 50px;
-    font-size: xx-large;
+    padding: 2em;
+    font-size: 1.5rem;
 }
 
-footer .icons .icon{
+footer .icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(245, 245, 245);
+    background: #b9baba;
     border-radius: 50%;
-    padding: 5px;
-    width: 40px;
-    height: 40px;
+    padding: .1em;
     cursor: pointer;
+    color: black;
 }
 
-/* media */
-@media(min-width:1600px){
-    #nav .title{
-        left: 10%;
-    }
-
-    #nav .menu{
-        right: 10%;
-    }
-    
-    #main .info{
-        left: 10%;
-    }
-    
-    #main .image{
-        right: 11%;
-    }
-
-    #content .projects{
-        display: block;
-        margin: 0 10%;
-    }
+footer i{
+    padding: .5em;
 }
 
-@media(max-width:1340px){
-    #main .image{
-        position: relative;
-        top: 50px;
-        right: 50px;
-    }
+footer .fa-facebook-f{
+    padding: .5em .7em;
 }
 
-@media(max-width:1160px){
-    #main .image{
-        display: none;
-    }
 
-    #main{
-        padding-top: 100px;
-        padding-bottom: 200px;
-    }
-    
-    #content .projects .project {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 50px 0;
-    }    
-
-    #content .projects .project .image {
-        flex: 0;
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #content .projects .project .image img{
-        width: 100%;
-    }
-
-    #content .projects .project .text {
-        flex: none;
-        margin: 0;
-    }
-}
-
-@media(max-width:768px){
-    #nav{
-        height: 60px;
-        justify-content: space-evenly;
-    }
-
-    #nav .title{
-        display: none;
-    }
-    
-    #nav .menu{
-        position: static;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-
-    #nav .menu a{
-        font-size: 1rem;
-    }
-    
-    .hire a{
-        font-size: 1rem;
-    }
-
-    #main .info {
-        left: 10%;
-    }
-
-    #main .info .name{
-        font-size: 2.5rem;
-        line-height: 80px;
-    }
-
-    #main .info .name::before{
-        padding: 5px 420px 0 0;
-    }
-
-    #main .info .job{
-        font-size: 1.5rem;
-        top:40px;
-    }
-
-    #main .info .about{
-        width: 420px;
-        line-height: 20px;
-        top:65px;
-        font-size: 1rem;
-    }
-
-    #main .action{
-        top:95px;
-    }
-    
-    #content .title{
-        text-align: center;
-        font-size: 1rem;
-        color: white;
-        padding: 50px 0;
-    }
-
-    #content .projects .project .text h2{
-        font-size: 1.5rem;
-    }
-    
-    #content .projects .project .text p{
-        font-size: 1rem;
-        line-height: 20px;
-    }
-    
-    footer .text{
-        font-size: 1rem;
-        line-height: 20px;
-    }
-    
-    footer .icons .icon{
-        width: 30px;
-        height: 30px;
-    }
-    
-    footer .icons{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 50%;
-        padding: 50px;
-        font-size: large;
-    }
-}
-
-@media(max-width:530px){
-    #nav .menu a{
-        padding: 5px;
-        font-size: .5rem;
+/* 
+============
+    media quiery
+============
+*/
+/* 3xs */
+@media (min-width: 320px) {
+    html{
+        font-size: 3px;
     }
 
     .hire{
-        padding: 5px;
-        font-size: .5rem;
-    }
-
-    .hire a{
-        font-size: .5rem;
-    }
-
-    #main .info .name{
-        font-size: 2rem;
-        line-height: 90px;
-    }
-
-    #main .info .name::before{
-        padding: 5px 338px 0 0;
-    }
-
-    #main .info .job{
-        top:20px;
-        font-size: 1rem;
-    }
-
-    #main .info .about{
-        top:35px;
-        width: 340px;
-        font-size: .5rem;
-        line-height: 10px;
-    }
-
-    #main .action{
-        top:45px;
-        width: 180px;
-    }
-
-    #main .explore{
-        width: 30px;
-        height: 20px;
-    }
-
-    #main .explore button{
-        padding: 10px;
-    }
-
-    #main .explore button div{
-        border: 5px solid;
-        border-color: transparent transparent transparent #3639d3;
-        position: absolute;
-        top:3px;
-        left: 7px;
-    }
-
-    #main .explore p{
-        font-size: .5rem;
-        right: 10px;
+        line-height: .5;
     }
     
-    #content .title{
-        font-size: .5rem;
-        line-height: 0;
+
+    .main{
+        padding: 16em 0;
+    }
+    
+    .container{
+        max-width: 320px;
     }
 
-    #content .projects .project{
-        padding: 20px 0;
+    .nav{
+        left: calc((100% - 320px) / 2);
     }
-    #content .projects .project .text h2{
-        font-size: .9rem;
-    }
-
-    #content .projects .project .text p{
-        font-size: .5rem;
-        line-height: 10px;
-    }
-
-    footer .text{
-        font-size: .5rem;
-        line-height: 10px;
-    }
-
-    footer .icons{
-        padding: 10px 0;
-
-    }
-
-    footer .icons .icon{
-        width: 10px;
-        height: 10px;
-    }
-
-    footer .icons .icon i{
-        font-size: small;
-    }    
 }
 
-@media(max-width:385px){
-    #main .explore{
-        display: none;
+/* 2xs */
+@media (min-width: 375px) {
+    html{
+        font-size: 4px;
     }
 
-    #main .info .name{
-        font-size: 1.5rem;
-        line-height: 100px;
+    .container{
+        max-width: 375px;
     }
 
-    #main .info .name::before{
-        padding: 5px 254px 0 0;
+    .nav{
+        left: calc((100% - 375px) / 2);
+    }
+}
+
+
+/* xs */
+@media (min-width: 475px) {
+    html{
+        font-size: 5px;
     }
 
-    #main .info .job{
-        top:10px;
-        font-size: .8rem;
+    .container{
+        max-width: 475px;
     }
 
-    #main .info .about{
-        top:25px;
-        width: 250px;
-        font-size: .5rem;
-        line-height: 10px;
+    .nav{
+        left: calc((100% - 475px) / 2);
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    html{
+        font-size: 7px;
+    }
+
+    .hire{
+        line-height: 1.5;
+    }
+    
+    .container{
+        max-width: 640px;
+    }
+
+    .nav{
+        left: calc((100% - 640px) / 2);
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    html{
+        font-size: 8.5px;
+    }
+
+    .container{
+        max-width: 768px;
+    }
+
+    .nav{
+        left: calc((100% - 768px) / 2);
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    html{
+        font-size: 11.5px;
+    }
+
+    .container{
+        max-width: 1024px;
+    }
+
+    .nav{
+        left: calc((100% - 1024px) / 2);
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .container{
+        max-width: 1280px;
+    }
+
+    .nav{
+        left: calc((100% - 1280px) / 2);
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .container{
+        max-width: 1536px;
+    }
+
+    .nav{
+        left: calc((100% - 1536px) / 2);
     }
 
 }
